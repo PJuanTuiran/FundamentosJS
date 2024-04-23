@@ -12,11 +12,11 @@ const establecerViaje = (expRegularLe) => {
     }
     return destino
 }
-const DiasEstimados = (expRNumeros) => {
+const DiasEstimados = (expRp) => {
     let dias;
     while (true) {
         dias = prompt("ingresa los dias estimados de tu viaje")
-        if (!expRNumeros.test(dias) || dias == null) {
+        if (!expRp.test(dias) || dias == null) {
             alert("ingresaste algo invalido!")
         } else {
            break
@@ -24,11 +24,11 @@ const DiasEstimados = (expRNumeros) => {
     }
     return dias
 }
-const presupuestoInicial = (expRNumeros) => {
+const presupuestoInicial = (expRp) => {
     let presupuesto;
     while (true) {
         presupuesto = prompt("ingresa tu presupuesto para este viaje")
-        if (!expRNumeros.test(presupuesto) || presupuesto == null) {
+        if (!expRp.test(presupuesto) || presupuesto == null) {
             alert("ingresaste un valor invalido!")
         }
         else {
@@ -49,12 +49,12 @@ const validarPresupuesto = ( dias,presupuesto, costoDiario) => {
 
 const viajeDeJulian = () => {
     let expRegularlE = /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/
-    let expRprecios = /^[0-9]+[.,]{1,1}\[0]{2,2}$/
+    let expRprecios = /^[0-9]+[.,]{0,1}\[0]{0,2}$/
     let expRnumeros = /^[0-9]+$/
     let costoDiarioEstimado = 300
     const lugar =  establecerViaje(expRegularlE)
-    let dias = DiasEstimados(expRnumeros)
-    let presupuesto = presupuestoInicial(expRnumeros)
+    let dias = DiasEstimados(expRprecios)
+    let presupuesto = presupuestoInicial(expRprecios)
     validarPresupuesto(dias, presupuesto, costoDiarioEstimado)
     
 }

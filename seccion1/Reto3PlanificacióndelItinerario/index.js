@@ -1,7 +1,7 @@
 
 
 
-let IngresaPresupuestoInicial = (expRnumeros) => {
+const IngresaPresupuestoInicial = (expRnumeros) => {
     let presupuesto;
     while (true) {
         presupuesto = prompt("ingresa tu presupuesto inicial")
@@ -14,7 +14,7 @@ let IngresaPresupuestoInicial = (expRnumeros) => {
     return presupuesto
   
 }
-let CostoEstimadoAlojamiento = (expRnumeros) => {
+const CostoEstimadoAlojamiento = (expRnumeros) => {
     let alojamiento;
     while (true) {
         alojamiento =  prompt("ingresa costo estimado del alojamiemiento")
@@ -27,7 +27,7 @@ let CostoEstimadoAlojamiento = (expRnumeros) => {
     return alojamiento
 }
 
-let CostoEstimadoTransporte = (expRnumeros) => {
+const CostoEstimadoTransporte = (expRnumeros) => {
     let transporte;
     while (true) {
         transporte = prompt("ingresa costo estimado del transporte")
@@ -40,7 +40,7 @@ let CostoEstimadoTransporte = (expRnumeros) => {
     return transporte
  
 }
-let CostoEstimadoComida = (expRnumeros) => {
+const CostoEstimadoComida = (expRnumeros) => {
     let comida;
     while (true) {
         comida = prompt("ingresa costo estimado del comida")
@@ -53,7 +53,7 @@ let CostoEstimadoComida = (expRnumeros) => {
     return comida
  
 }
-let limiteDeUmbral = (expRnumeros) => {
+const limiteDeUmbral = (expRnumeros) => {
     let umbral;
     while (true) {
         umbral= prompt("ingresa limite del umbral")
@@ -67,9 +67,9 @@ let limiteDeUmbral = (expRnumeros) => {
  
 }
 
-let calcularPresupuesto = (presupuesto, alojamiento, transporte, comida ) =>  presupuesto - (alojamiento + transporte + comida )
+const calcularPresupuesto = (presupuesto, alojamiento, transporte, comida ) =>  presupuesto - (alojamiento + transporte + comida )
 
-let sellevaelarticulo = (totalPresupuesto, umbrall) => {
+const sellevaelarticulo = (totalPresupuesto, umbrall) => {
   
     if (umbrall < totalPresupuesto) {
         alert("puedes considerar llevar  articulo extra")
@@ -91,7 +91,7 @@ const agregarArticulos = (expRegularlE, expRNumeros) => {
         
         newArticles.push({nameArticle: nameArticle, precioArticle:precioArticle})
     }
-    return newArticles
+    return newArticconst
 }
 
 const precioDeLosArticle = (articles, totalPresupuesto) => {

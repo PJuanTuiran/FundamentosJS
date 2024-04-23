@@ -1,4 +1,4 @@
-const HowFell = {
+const HowFeel = {
     nvEnegia: null,
     clima: false,
     cargaDeldia:true
@@ -7,30 +7,32 @@ const HowFell = {
 
 const actividades = () => {
     return new Promise((resolve, reject) => {
-        if (HowFell.cargaDeldia === false) {
+        if (HowFeel.cargaDeldia === false) {
             reject("no puedes hacer nada hoy")
         } else {
-            resolve(HowFell)
+            resolve(HowFeel)
         }
     })
 }
 
 
 actividades()
-    .then((HowFell) => {
-        if (HowFell.nvEnegia === null) {
-            return "tomate el dia de descanso"
-        } else {
-            return "puedes decidir salir un rato"
-        }
-     
-    }).then((men) => {
-        console.log(men)
-        if (HowFell.clima == false) {
-            return "quedarse en casa trabajando en proyectos personales o simplemente relajarse."
-        }
-    }).then(res => {
-        console.log(res)
+.then((HowFeel) => {
+    setTimeout(() => {
+        console.log("hola carlos jaja")
+    })
+    if (HowFeel.nvEnegia === null) {
+        return "tomate el dia de descanso"
+    } else if(HowFeel.clima == false){
+        return "quedarse en casa trabajando en proyectos personales o simplemente relajarse."
+    }
+    else {
+        return "puedes decidir salir un rato"
+    }
+    
+}).then((menssge) => {
+        console.log(menssge)
+
         
     }).catch((err) => {
         console.log(err)
